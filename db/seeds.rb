@@ -10,7 +10,7 @@
 
 # Administrators
 
-#Administrator.create(email: "admin", password: "anyboostadminpassword391", first_name: "Admin", last_name: "User").save(validate: false)
+Administrator.create(email: "admin", password: "anyboostadminpassword391", first_name: "Admin", last_name: "User").save(validate: false)
 
 # Games
 
