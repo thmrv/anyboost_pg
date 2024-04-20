@@ -1,0 +1,17 @@
+<% case @field_type 
+when 'dropdown' %>
+<div class="<%= @classname %>">
+    <label class="label-embedded"><%= @label %></label>
+    <input class="input" type="<%= @type %>" name="<%= @name %>">
+</div>
+<% when 'text' %>
+<div class="<%= @classname %>">
+    <label class="label-embedded"><%= @label %></label>
+    <input class="input" type="<%= @type %>" name="<%= @name %>">
+</div>
+<% when 'scale' %>
+<div class="<%= @classname %>">
+    <label class="label-embedded"><%= @label %></label>
+    <input class="input" type="<%= @type %>" name="<%= @name %>">
+</div>
+<% end %>

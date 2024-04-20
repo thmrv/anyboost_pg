@@ -1,0 +1,58 @@
+<section class="section configurator">
+    <div class="configurator upper wrapper">
+        <%= render(ImageComponent.new(src: 'levelup.png', href: '/')) do %><% end %>
+        <div class="configurator title choose-your-game"><%= t('strings.choose_game') %><%= render(ImageComponent.new(src: 'arrow_pointer_right.svg', href: '/')) do %><% end %></div>
+    </div>
+    <div class="configurator wrapper">
+        <div class="configurator sidebar game-selector">
+            <% @games.to_a.each_with_index do |game, index| %>
+            <div class="tab game <% if index == 0 %> selected <% end %> <% if game.pickable %> pickable <% end %> animate__animated animate__fadeInUp">
+                <div class="game icon wrapper"><%= render(ImageComponent.new(src: game.logo_url, href: '/')) do %><% end %><%= game.name %></div><%= render(ImageComponent.new(src: 'icon_arrow_gametab.svg', href: '/')) do %><% end %>
+            </div>
+            <% end %>
+        </div>
+        <div class="game illustrated-preview">
+            <% @games.to_a.each_with_index do |game, index| %>
+            <div class="preview <% if index != 0 %> hidden <% end %> inner animate__animated animate__fadeInLeft" preview-<%= game.name %>>
+                <%= render(ImageComponent.new(src: game.preview_image_url, href: '/')) do %><% end %>
+            </div>
+            <% end %>
+            <%= render(ImageComponent.new(src: 'preview_lighting.png', href: '/')) do %><% end %>
+    </div>
+    </div>
+    </div>
+    <div class="configurator lower wrapper">
+        <% @games.to_a.each_with_index do |game, game_id| %>
+        <div class="game outer <% if game_id != 0 %> hidden <% end %>">
+            <%= render(ServiceTabsComponent.new(services: @services, game: game)) do %><% end %>
+            <% @services.where(:game_id => game.id).to_a.each_with_index do |service, service_id| %>
+                <%= render(ServiceSectionComponent.new(service: service, type: service.service_type, service_id: service_id, fields: @fields.where(:service_id => service.id).to_a)) do %><% end %>
+            <% end %>
+            <div class="results wrapper animate__animated animate__fadeInUp">
+                <%= render(GameExtrasComponent.new(extra: @extra, game_id: game.id)) do %><% end %>
+                <div class="calculated wrapper animate__animated animate__fadeInUp">
+                    <div class="fullprice inner">
+                        <label class="fullprice label"><%= t('strings.fullprice') %></label>
+                        <div class="fullprice price" price><span class="currency"><%= t('strings.currency_sign') %></span><span data-id="price"><%= '0.0' %></span></div>
+                        <%= render(ButtonComponent.new(href: order_path, style: 'filled-purple', contents: t('strings.order_boost'), icon: 'arrow_trigger.svg')) do %><% end %>
+                    </div>
+                    <div class="fullprice compare inner">
+                        <label class="fullprice label"><%= t('strings.fullprice_compare') %></label>
+                        <div class="fullprice price compare" price><span class="currency">~<%= t('strings.currency_sign') %></span><span data-id="compared_price"><%= '0.0' %></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% end %>
+    </div>
+    <div class="configurator footer">
+        <div class="paygate-logos wrapper animate__animated animate__fadeInUp">
+            <%= render(ImageComponent.new(src: 'icon_visa.svg', href: '/', wrapperclassname: 'paygate-icon')) do %><% end %>
+            <%= render(ImageComponent.new(src: 'icon_mc.svg', href: '/', wrapperclassname: 'paygate-icon')) do %><% end %>
+            <%= render(ImageComponent.new(src: 'icon_mir.svg', href: '/', wrapperclassname: 'paygate-icon')) do %><% end %>
+        </div>
+        <div class="support wrapper animate__animated animate__fadeInUp">
+            <a href="#"><%= t('strings.support') %></a>
+            <%= render(ImageComponent.new(src: 'icon_support.svg', href: '/', wrapperclassname: 'support-icon')) do %><% end %>
+        </div>
+    </div>

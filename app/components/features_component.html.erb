@@ -1,0 +1,17 @@
+<div class="features wrapper">
+    <div class="feature wrapper">
+        <%= render(ImageComponent.new(src: 'icon_safety.svg', href: '/', wrapperclassname: 'feature-icon')) do %><% end %>
+        <h3 class="feature title"><%= t('strings.feature_safety_title') %></h3>
+        <p class="feature description"><%= t('content.feature_safety_text') %></p>
+    </div>
+    <div class="feature wrapper">
+        <%= render(ImageComponent.new(src: 'icon_expirience.svg', href: '/', wrapperclassname: 'feature-icon')) do %><% end %>
+        <h3 class="feature title"><%= t('strings.feature_expirience_title') %></h3>
+        <p class="feature description"><%= t('content.feature_expirience_text') %></p>
+    </div>
+    <div class="feature wrapper">
+        <%= render(ImageComponent.new(src: 'icon_friendliness.svg', href: '/', wrapperclassname: 'feature-icon')) do %><% end %>
+        <h3 class="feature title"><%= t('strings.feature_friendliness_title') %></h3>
+        <p class="feature description"><%= t('content.feature_friendliness_text') %></p>
+    </div>
+</div>

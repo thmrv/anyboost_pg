@@ -1,0 +1,80 @@
+# Files in the config/locales directory are used for internationalization and
+# are automatically loaded by Rails. If you want to use locales other than
+# English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t "hello"
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t("hello") %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more about the API, please read the Rails Internationalization guide
+# at https://guides.rubyonrails.org/i18n.html.
+#
+# Be aware that YAML interprets the following case-insensitive strings as
+# booleans: `true`, `false`, `on`, `off`, `yes`, `no`. Therefore, these strings
+# must be quoted to be interpreted as strings. For example:
+#
+#     en:
+#       "yes": yup
+#       enabled: "ON"
+
+ru:
+  site:
+    name: "AnyBoost"
+    description: "Професcиональный буст ваших любимых игр"
+  strings:
+    menu_alt: "Меню"
+    logo_alt: "Лого"
+    main: "Главная"
+    masthead_title: "Играй на<br>уровне"
+    or: "или"
+    learn_more: "подробнее"
+    calculate_boost: "рассчитать буст"
+    for_members: "для участников"
+    choose_game: "Выбрать игру"
+    support: "Поддержка"
+    order_boost: "Заказать буст"
+    currency_sign: "₽"
+    fullprice: "Полная цена"
+    fullprice_compare: "Цена у других"
+    currency: "Валюта"
+    feature_expirience_title: "с опытом"
+    feature_safety_title: "безопасно"
+    feature_friendliness_title: "дружелюбно"
+    phone_num: "+7 495 101 01 10"
+    phone: "телефон"
+    agreement: "Договор оферты"
+    requisites: "Реквизиты"
+    policy: "Политика конфиденциальности"
+    email_contact: "info@anyboost.ru"
+    faq: "FAQ"
+    signin: "Войти"
+  content:
+    masthead_caption: "С нашим про - ресурсом беспокоиться не придется. 
+    Быстрый и надежный буст твоего аккаунта 
+    в 5 самых популярных онлайн - аренах."
+    feature_expirience_text: "У нас большой опыт в бустинге и организации профессиональных игроков. С любыми проблемами мы уже сталкивались и решим любой затык."
+    feature_safety_text: "Мы относимся к нашему делу серьезно. ваши данные и аккаунты в безопасности."
+    feature_friendliness_text: "Наши спецы вежливы и обходительны. 
+Глупый вопрос - просто вопрос."
+    faq_01: "Как платить?"
+    faq_02: "Как быстро можно ожидать результат?"
+    faq_03: "За что придется доплатить?"
+  auth: 
+    signin: "Войти"
+    current_password: "текущий пароль"
+    password: "пароль"
+    email: "email"
+    rememberme: "Запомнить меня"
+  pages:
+    auth: "Авторизация"
+

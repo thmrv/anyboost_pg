@@ -1,0 +1,13 @@
+<% if !@rank %>
+<div class="<%= @classname %>">
+    <label class="label-embedded"><%= @label %></label>
+    <input class="input" type="<%= @type %>" name="<%= @name %>">
+</div>
+<% else %>
+<div class="rank <%= @classname %>">
+    <div class="rank substract">-<%= @substructValue %></div>
+    <label class="label-embedded center"><%= @label %></label>
+    <input class="input" disabled value="<% @defaultValue %>" type="<%= @type %>" name="<%= @name %>">
+    <div class="rank add">+<%= @addValue %></div>
+</div>
+<% end %>

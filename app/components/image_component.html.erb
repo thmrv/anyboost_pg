@@ -1,0 +1,9 @@
+<% if !@asBackground %>
+<div class="image wrapper <%= @wrapperclassname %>">
+    <% if defined? @href != nil %><a href="<%= @href %>"><% end %><img class="img <%= @classname %>" alt="<%= @alt %>" src="<%= @src %>"><% if defined? @href != nil %></a><% end %>
+</div>
+<% else %>
+<div class="image wrapper">
+    <div class="img as-background" style="background-image:url('<%= @src %>')">
+</div>
+<% end %>

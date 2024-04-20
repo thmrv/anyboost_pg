@@ -1,0 +1,21 @@
+<div class="service body <% if @service_id != 0 %> hidden <% end %>" data-service-id="<% @service_id %>">
+    <% case @type
+       when 'rank' %>
+    <div class="ranks wrapper animate__animated animate__fadeInUp">
+        <%= render(CalculatorInputComponent.new(label: t('strings.rank-current'), name: 'rank-current', classname: 'configurator-input', type: 'text', rank: true, defaultValue: '2300')) do %><% end %>
+        <%= render(ImageComponent.new(src: 'icon_dots.svg', href: '#', wrapperclassname: 'rank-dots')) do %><% end %>
+        <%= render(CalculatorInputComponent.new(label: t('strings.rank-desired'), name: 'rank-desired', classname: 'configurator-input', type: 'text', rank: true)) do %><% end %>
+    </div>
+    <% when 'elo' %>
+    <div class="ranks wrapper animate__animated animate__fadeInUp">
+        <%= render(CalculatorInputComponent.new(label: t('strings.rank-current'), name: 'elo-current', classname: 'configurator-input', type: 'text', rank: false, defaultValue: '2300')) do %><% end %>
+        <%= render(ImageComponent.new(src: 'icon_dots.svg', href: '#', wrapperclassname: 'rank-dots')) do %><% end %>
+        <%= render(CalculatorInputComponent.new(label: t('strings.rank-desired'), name: 'elo-desired', classname: 'configurator-input', type: 'text', rank: false)) do %><% end %>
+    </div>
+    <% end %>
+    <% @fields.each do |field| %>
+        <div class="fields wrapper animate__animated animate__fadeInUp">
+            <%= render(InputComponent.new(label: t('fields.' + field.label), name: field.name, classname: 'configurator-input', type: 'text', field_type: field.field_type)) do %><% end %>
+        </div>
+    <% end %>
+</div>

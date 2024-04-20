@@ -1,0 +1,5 @@
+<div class="extras wrapper inner">
+    <% @extra.where(:game_id => @game_id).to_a.each_with_index do |extra, index| %>
+        <div class="extra wrapper"><div class="extra inner"><%= render(SwitchComponent.new(defaultValue: false)) do %><% end %><%= extra.name %></div></div>
+    <% end %>
+</div>

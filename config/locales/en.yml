@@ -1,0 +1,76 @@
+# Files in the config/locales directory are used for internationalization and
+# are automatically loaded by Rails. If you want to use locales other than
+# English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t "hello"
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t("hello") %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more about the API, please read the Rails Internationalization guide
+# at https://guides.rubyonrails.org/i18n.html.
+#
+# Be aware that YAML interprets the following case-insensitive strings as
+# booleans: `true`, `false`, `on`, `off`, `yes`, `no`. Therefore, these strings
+# must be quoted to be interpreted as strings. For example:
+#
+#     en:
+#       "yes": yup
+#       enabled: "ON"
+
+en:
+  site:
+    name: "AnyBoost"
+    description: "Gaming boost by professionals"
+  strings:
+    menu_alt: "Menu"
+    logo_alt: "Logo"
+    main: "Main"
+    masthead_title: "Play<br>bold"
+    or: "or"
+    learn_more: "learn more"
+    calculate_boost: "calculate gaming boost"
+    for_members: "members area"
+    support: "Client support"
+    currency_sign: "$"
+    fullprice: "Full price"
+    fullprice_compare: "Compared  prices"
+    currency: "Currency"
+    feature_expirience_title: "Expirienced"
+    feature_safety_title: "Safety first"
+    feature_friendliness_title: "Friendly"
+    phone_num: "+7 495 101 01 10"
+    phone: "phone"
+    agreement: "Service agreement"
+    requisites: "Payment requisites"
+    policy: "Privacy policy"
+    email_contact: "info@anyboost.ru"
+    faq: "FAQ"
+    signin: "Sign in"
+  content:
+    masthead_caption: "With our pro resource you won't have to worry.
+    Fast and reliable boost to your account
+    in the 5 most popular online arenas."
+    feature_expirience_text: "We have extensive experience in boosting and organizing professional players. We have already encountered any problems and will solve any problem."
+    feature_safety_text: "We take our business seriously. your data and accounts are safe."
+    feature_friendliness_text: "Our specialists are polite and courteous. Stupid question - just a question."
+    faq_01: "How do i pay?"
+    faq_02: "How quick can actual results be seen?"
+    faq_03: "What will have to be paid extra?"
+  auth: 
+    signin: "Sign in"
+    current_password: "current password"
+    password: "password"
+    email: "email"
+    rememberme: "Remember me"
+  pages:
+    auth: "Authorization"

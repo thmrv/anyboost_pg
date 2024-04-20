@@ -1,0 +1,78 @@
+.image.wrapper.masthead-background-wrapper {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: -1;
+}
+
+.game.outer {
+    width: 100%;
+    padding: 1em;
+}
+
+.services.wrapper {
+    position: relative;
+}
+
+.service.tab {
+    font-size: 0.85em;
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.479);
+    cursor: pointer;
+}
+
+.service.tab:hover {
+    color: white;
+}
+
+.service.tab.selected {
+    height: 50px;
+    border-bottom: 2px solid #BA49FF;
+    background: asset-data-url("services_selected.png");
+    color: white;
+}
+
+.configurator.footer {
+    margin-top: 2em;
+    border-top: 1px solid #ffffff21;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.paygate-logos.wrapper {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.rank.configurator-input {
+    cursor: pointer;
+}
+
+.locale.switch {
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.8em;
+}
+
+.label-embedded.center {
+    width: 100%;
+    text-align: center;
+    left: 0px;
+}
+
+.tab.game.pickable {
+    opacity: 1 !important;
+    pointer-events: all;
+}
+
+.tab.game {
+    opacity: 0.35 !important;
+    pointer-events: none;
+}

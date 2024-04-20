@@ -1,0 +1,8 @@
+<%= link_to(@href, class: "button link-outer") do %>
+<div class="button wrapper <%= @style %>">
+        <div class="button-link wrapper">
+                <% if @icon != '' %><%= render(ImageComponent.new(src: @icon, href: '/')) do %><% end %><% end %>
+                <%= @contents %>
+        </div>
+</div>
+<% end %>

@@ -1,0 +1,18 @@
+<!-- Head -->
+<%= render(HeadComponent.new(pageTitle: "Welcome", disableMasthead: false)) do %>
+<% end %>
+<!-- Conf -->
+<%= render(ConfiguratorComponent.new(games: @games, fields: @fields, extra: @extra, services: @services)) do %>
+<% end %>
+<!-- Features -->
+<%= render(FeaturesComponent.new()) do %>
+<% end %>
+<!-- Process -->
+<%= render(ProcessComponent.new()) do %>
+<% end %>
+<!-- Faq -->
+<%= render(FaqComponent.new()) do %>
+<% end %>
+<!-- Foot -->
+<%= render(FooterComponent.new()) do %>
+<% end %>

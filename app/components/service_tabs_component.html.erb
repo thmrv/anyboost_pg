@@ -1,0 +1,8 @@
+<div class="services wrapper animate__animated animate__fadeInUp">
+    <%= render(ImageComponent.new(src: 'services_shadow.svg', href: '/', wrapperclassname: 'services-shadow')) do %><% end %>
+        <div class="services inner">
+            <% @services.where(:game_id => @game.id).to_a.each_with_index do |service, service_id| %>
+                <div class="service tab <% if service_id == 0 %> selected<% end %>"><%= service.name %></div>
+            <% end %>
+    </div>
+</div>

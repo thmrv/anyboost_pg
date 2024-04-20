@@ -1,0 +1,31 @@
+<section class="section header">
+    <div class="header inner">
+        <div class="logo wrapper animate__animated animate__fadeInUp">
+            <%= render(ImageComponent.new(src: 'logo_light.svg', href: '/')) do %><% end %>
+        </div>
+        <div class="buttons wrapper animate__animated animate__fadeInUp">
+            <a href="<%= "?locale=#{params[:locale] == 'ru' ? 'en': 'ru'}" %>" class="locale switch"><%= I18n.locale %></a>
+            <%= render(ButtonComponent.new(href: new_user_session_path, style: 'outline', contents: t('strings.for_members'), icon: 'arrow_trigger.svg')) do %><% end %>
+        </div>
+    </div>
+</section>
+<% if !@disableMasthead %>
+<section class="section masthead">
+    <div class="masthead inner animate__animated animate__fadeIn">
+        <%= render(ImageComponent.new(src: 'masthead_title_'"#{I18n.locale}"'.svg', classname: 'mastheadtitle')) do %><% end %>
+    </div>
+    <div class="masthead lower wrapper">
+        <div class="masthead caption animate__animated animate__fadeInDown">
+            <%= render(ImageComponent.new(src: 'corner_element.svg', href: '/')) do %>
+            <% end %>
+            <span class="masthead caption"><%= t('content.masthead_caption') %></span>
+        </div>
+        <div class="masthead buttons animate__animated animate__fadeInDown">
+            <%= render(ButtonComponent.new(href: '#', style: 'outline', contents: t('strings.learn_more'), icon: 'arrow_trigger.svg')) do %><% end %>
+            <span class="or-span"><%= t('strings.or') %></span>
+            <%= render(ButtonComponent.new(href: '#configurator', style: 'filled', contents: t('strings.calculate_boost'), icon: 'arrow_trigger_upright.svg')) do %><% end %>
+        </div>
+    </div>
+    <%= render(ImageComponent.new(src: 'masthead_background.png', classname: 'masthead-background', wrapperclassname: 'masthead-background-wrapper')) do %><% end %>
+</section>
+<% end %>

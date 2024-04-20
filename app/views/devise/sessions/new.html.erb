@@ -1,0 +1,33 @@
+<title><% t('pages.auth') %></title>
+<div class="auth-wrapper">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="auth field">
+    <span class="auth label"><%= t('auth.email') %></span>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="auth field">
+    <span class="auth label"><%= t('auth.password') %></span>
+    <%= f.password_field :password, autocomplete: "current-password" %>
+  </div>
+
+  <div class="auth actions submit">
+    <%= f.submit t('auth.signin') %>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+  <div class="auth remember">
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label t('auth.rememberme') %>
+    </div>
+  </div>
+  <% end %>
+
+<% end %>
+
+<%= render "devise/shared/links" %>
+</div>
