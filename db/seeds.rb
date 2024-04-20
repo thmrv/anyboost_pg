@@ -54,3 +54,26 @@ Extra.find_or_create_by(name: 'Priority Order', label: '', game_id: Game.where(:
 Extra.find_or_create_by(name: 'Express Order', label: '', game_id: Game.where(:name => 'VALORANT').first.id, price_modifier: 0.6)
 Extra.find_or_create_by(name: 'Stream', label: '', game_id: Game.where(:name => 'VALORANT').first.id, price_modifier: 0.15)
 Extra.find_or_create_by(name: 'Set Steam Offline', label: '', game_id: Game.where(:name => 'VALORANT').first.id, price_modifier: 0)
+
+# Ranks
+
+Rank.find_or_create_by(game_id: Game.where(:name => 'COUNTER-STRIKE').first.id, icon_url: "ranks/cs_silver1.png", name: "Silver I", baseline_price: 100.0)
+Rank.find_or_create_by(game_id: Game.where(:name => 'COUNTER-STRIKE').first.id, icon_url: "ranks/cs_silver2.png", name: "Silver II", baseline_price: 100.0)
+Rank.find_or_create_by(game_id: Game.where(:name => 'COUNTER-STRIKE').first.id, icon_url: "ranks/cs_silver3.png", name: "Silver III", baseline_price: 100.0)
+Rank.find_or_create_by(game_id: Game.where(:name => 'COUNTER-STRIKE').first.id, icon_url: "ranks/cs_silver4.png", name: "Silver IV", baseline_price: 100.0)
+Rank.find_or_create_by(game_id: Game.where(:name => 'COUNTER-STRIKE').first.id, icon_url: "ranks/cs_silver5.png", name: "Silver V", baseline_price: 165.0)
+Rank.find_or_create_by(game_id: Game.where(:name => 'COUNTER-STRIKE').first.id, icon_url: "ranks/cs_silver6.png", name: "Silver VI", baseline_price: 1165.0)
+Rank.find_or_create_by(game_id: Game.where(:name => 'COUNTER-STRIKE').first.id, icon_url: "ranks/cs_nova1.png", name: "Nova I", baseline_price: 2165.0)
+Rank.find_or_create_by(game_id: Game.where(:name => 'COUNTER-STRIKE').first.id, icon_url: "ranks/cs_nova2.png", name: "Nova II", baseline_price: 3165.0)
+Rank.find_or_create_by(game_id: Game.where(:name => 'COUNTER-STRIKE').first.id, icon_url: "ranks/cs_nova3.png", name: "Nova III", baseline_price: 4165.0)
+Rank.find_or_create_by(game_id: Game.where(:name => 'COUNTER-STRIKE').first.id, icon_url: "ranks/cs_nova4.png", name: "Nova IV", baseline_price: 1210.0)
+Rank.find_or_create_by(game_id: Game.where(:name => 'COUNTER-STRIKE').first.id, icon_url: "ranks/cs_master.png", name: "Master", baseline_price: 2210.0)
+Rank.find_or_create_by(game_id: Game.where(:name => 'COUNTER-STRIKE').first.id, icon_url: "ranks/cs_master2.png", name: "Master II", baseline_price: 500.0)
+Rank.find_or_create_by(game_id: Game.where(:name => 'COUNTER-STRIKE').first.id, icon_url: "ranks/cs_masterelite.png", name: "Master Elite", baseline_price: 730.0)
+Rank.find_or_create_by(game_id: Game.where(:name => 'COUNTER-STRIKE').first.id, icon_url: "ranks/cs_globalelite.png", name: "Global Elite", baseline_price: 1340.0)
+
+Rank.find_or_create_by(game_id: Game.where(:name => 'VALORANT').first.id, icon_url: "ranks/valorant_Ascendant_1_Rank.png", name: "Ascendant 1", baseline_price: )
+Rank.find_or_create_by(game_id: Game.where(:name => 'VALORANT').first.id, icon_url: "ranks/valorant_Ascendant_1_Rank.png", name: "Ascendant 1", baseline_price: )
+Rank.find_or_create_by(game_id: Game.where(:name => 'VALORANT').first.id, icon_url: "ranks/valorant_Ascendant_1_Rank.png", name: "Ascendant 1", baseline_price: )
+
+
